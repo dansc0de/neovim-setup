@@ -1,4 +1,3 @@
--- load lazy.nvim package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,15 +11,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- vim options
 require("vim-options")
-
--- lazy
 require("lazy").setup("plugins")
-
---vim.api.nvim_create_autocmd("VimEnter", {
---  command = "set nornu nonu | Neotree toggle",
---})
-vim.api.nvim_create_autocmd("BufEnter", {
-  command = "set rnu nu",
-})

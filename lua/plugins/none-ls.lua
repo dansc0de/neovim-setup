@@ -10,6 +10,7 @@ return {
         null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.formatting.rubocop,
       },
+      border = "single"
     })
 
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
